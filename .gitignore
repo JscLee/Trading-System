@@ -243,3 +243,7 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+/TradingSystem/turtle_out/hs300_out.xls
+/TradingSystem/turtle_out/sz50_out.xls
+/TradingSystem/turtle_out/zz500_out.xls
+/TradingSystem/index.xls

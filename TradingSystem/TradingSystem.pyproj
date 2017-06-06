@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>1a7eae61-d3cf-4576-a1d6-0fa314b1667f</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>TradingSystem.py</StartupFile>
+    <StartupFile>turtle.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,10 +22,10 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="HuiCe.py" />
-    <Compile Include="liangjia.py" />
+    <Compile Include="backtest.py" />
+    <Compile Include="vol_press.py" />
     <Compile Include="MACD_test.py" />
-    <Compile Include="test.py" />
+    <Compile Include="turtle.py" />
     <Compile Include="TradingSystem.py" />
   </ItemGroup>
   <PropertyGroup>
