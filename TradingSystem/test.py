@@ -2,7 +2,6 @@ import numpy as np
 import pandas as pd
 import xlrd
 
-ratio=0.1
 Account=1000000
 n=20
 bk = xlrd.open_workbook('index.xlsx')
@@ -25,12 +24,12 @@ for sheet in bk.sheets():
     for i in range(1,n):
         N[i]=max(da[i, 1] - da[i, 2], abs(da[i, 1] - da[i - 1, 4]), abs(da[i - 1, 4] - da[i, 2]))
         # print(i) #i=1----19
-        unit[i] = float(ratio * Account / N[i])
+        unit[i] = float(0.1 * Account / N[i])
 
     for i in range(n,numOfSamples): #i=20----266
         truerange = max(da[i,1]-da[i,2],abs(da[i,1]-da[i-1,4]),abs(da[i-1,4]-da[i,2]))
         N[i]=(sum(N[i-19:i])+truerange)/20  #dont change
-        unit[i] = float(ratio*Account/N[i])
+        unit[i] = float(0.1*Account/N[i])
 
         if unit_all[j] != 0:
             if da[i,4] >= cost[j]+0.5*N[i]:
