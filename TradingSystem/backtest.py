@@ -3,10 +3,10 @@ import pandas as pd
 import math
 import datetime
 
-df = pd.read_excel('huice_input.xlsx')
+df = pd.read_excel('.\\turtle_out\\hs300_out.xls')
 da = np.mat(df)
 
-rf = 0.02
+rf = 0.02   #无风险利率
 numofDays = 0
 numOfSamples = df.__len__()
 unit = np.zeros((numOfSamples, 1))
@@ -24,8 +24,8 @@ u = np.zeros((numOfSamples, 1))
 
 # 初始unit第一个元素为1
 unit[0, 0] = 1.0
-for i in range(1, numOfSamples):
-    if da[i, 2] == da[i - 1, 2]:  # m不变的情况
+for i in range(1, numOfSamples):    #扩展unit_all，长度为每日
+    if da[i, 2] == da[i - 1, 2]:  
         unit[i, 0] = 0
     else:
         unit[i, 0] = da[i, 1] - da[i - 1, 1]
